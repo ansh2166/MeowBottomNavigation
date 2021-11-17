@@ -131,47 +131,7 @@ class MeowBottomNavigation : FrameLayout {
     }
 
     private fun setAttributeFromXml(context: Context, attrs: AttributeSet) {
-        val a = context.theme.obtainStyledAttributes(
-            attrs,
-            R.styleable.MeowBottomNavigation, 0, 0
-        )
-        try {
-            a.apply {
-                defaultIconColor = getColor(
-                    R.styleable.MeowBottomNavigation_mbn_defaultIconColor,
-                    defaultIconColor
-                )
-                selectedIconColor = getColor(
-                    R.styleable.MeowBottomNavigation_mbn_selectedIconColor,
-                    selectedIconColor
-                )
-                backgroundBottomColor = getColor(
-                    R.styleable.MeowBottomNavigation_mbn_backgroundBottomColor,
-                    backgroundBottomColor
-                )
-                circleColor =
-                    getColor(R.styleable.MeowBottomNavigation_mbn_circleColor, circleColor)
-                countTextColor =
-                    getColor(R.styleable.MeowBottomNavigation_mbn_countTextColor, countTextColor)
-                countBackgroundColor = getColor(
-                    R.styleable.MeowBottomNavigation_mbn_countBackgroundColor,
-                    countBackgroundColor
-                )
-                rippleColor =
-                    getColor(R.styleable.MeowBottomNavigation_mbn_rippleColor, rippleColor)
-                shadowColor =
-                    getColor(R.styleable.MeowBottomNavigation_mbn_shadowColor, shadowColor)
 
-                val typeface = getString(R.styleable.MeowBottomNavigation_mbn_countTypeface)
-                if (typeface != null && typeface.isNotEmpty())
-                    countTypeface = Typeface.createFromAsset(context.assets, typeface)
-
-                hasAnimation =
-                    getBoolean(R.styleable.MeowBottomNavigation_mbn_hasAnimation, hasAnimation)
-            }
-        } finally {
-            a.recycle()
-        }
     }
 
     private fun initializeViews() {
